@@ -41,8 +41,7 @@
                                     <color key="baseForegroundColor" red="0.8980392157" green="0.96078431369999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="rollPreset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVV-QR-3TS"/>
-                                    <action selector="rollTheDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Boz-SX-eef"/>
+                                    <action selector="rollPresedd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVM-t8-skd"/>
                                 </connections>
                             </button>
                         </subviews>
