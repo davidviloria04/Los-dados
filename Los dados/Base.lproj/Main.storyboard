@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Los_dados" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-7F-4xi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-casino" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-Gm-JVn">
+                                <rect key="frame" x="120" y="94" width="174" height="182"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Kga-uP-2W5">
+                                <rect key="frame" x="75.333333333333343" y="394.66666666666669" width="263.33333333333326" height="106.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="do9-hu-D58">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="106.66666666666667"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="z7O-S5-lU1">
+                                        <rect key="frame" x="156.66666666666669" y="0.0" width="106.66666666666669" height="106.66666666666667"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkL-UG-ylV">
+                                <rect key="frame" x="32.333333333333343" y="591.33333333333337" width="349.66666666666663" height="66.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tirar los dados">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="45"/>
+                                    <color key="baseForegroundColor" red="0.8980392157" green="0.96078431369999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollPreset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVV-QR-3TS"/>
+                                    <action selector="rollTheDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Boz-SX-eef"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YXO-Gm-JVn" secondAttribute="bottom" constant="620" id="1RH-eI-l6b"/>
+                            <constraint firstAttribute="trailing" secondItem="YXO-Gm-JVn" secondAttribute="trailing" constant="120" id="7uL-cY-m0p"/>
+                            <constraint firstItem="Sak-7F-4xi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EC6-FC-Y7f"/>
+                            <constraint firstItem="Sak-7F-4xi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Et7-Aq-50O"/>
+                            <constraint firstItem="YXO-Gm-JVn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Gq7-Lh-5Lq"/>
+                            <constraint firstItem="Kga-uP-2W5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LnG-9e-19w"/>
+                            <constraint firstItem="YXO-Gm-JVn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="a58-sl-7Up"/>
+                            <constraint firstItem="Kga-uP-2W5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cPr-Gr-S0w"/>
+                            <constraint firstItem="wkL-UG-ylV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dDS-sc-J7n"/>
+                            <constraint firstItem="wkL-UG-ylV" firstAttribute="top" secondItem="Kga-uP-2W5" secondAttribute="bottom" constant="90" id="i0C-Jg-ruS"/>
+                            <constraint firstItem="Sak-7F-4xi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m6d-bf-5YY"/>
+                            <constraint firstItem="wkL-UG-ylV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mAI-Aq-xce"/>
+                            <constraint firstItem="YXO-Gm-JVn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oxu-cF-dR0"/>
+                            <constraint firstAttribute="bottom" secondItem="Sak-7F-4xi" secondAttribute="bottom" id="qL0-hg-46T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceLeft" destination="do9-hu-D58" id="myt-jP-gQ8"/>
+                        <outlet property="diceRight" destination="z7O-S5-lU1" id="LG4-af-fsj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1242" height="2688"/>
+        <image name="dice1" width="106.66666412353516" height="106.66666412353516"/>
+        <image name="logo-casino" width="2191" height="1621"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

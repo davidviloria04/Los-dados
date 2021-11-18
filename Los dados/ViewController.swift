@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var diceLeft: UIImageView!
+    @IBOutlet weak var diceRight: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func rollPreset(_ sender: UIButton) {
+        
+    }
 }
 
